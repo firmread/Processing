@@ -1,0 +1,105 @@
+-------------
+BEADS ROADMAP 
+-------------
+
+==================================================
+
+Is this how a roadmap looks? 
+The fewer stars, the further down the road it is.
+
+*** - definitely in V1.0
+**  - almost definitely in V1.0
+*   - scheduled for later V1s
+    - might happen in my lifetime
+
+==================================================
+
+--------
+Package:
+--------
+***Start using version numbers - STARTING FROM V0.
+**Clean up examples and tests, integrate with webpage.
+***Anything that doesn't make it into V1.0, mark as experimental or keep out of main package - DONE.
+**Provide some well documented higher level examples / tutorials including: generative music (no input), simple tools manipulated by 2D mouse input, simple step sequencer, mp3 library mashup.
+Start using Trac or Bugzilla.
+
+-------------
+AudioContext:
+-------------
+**Refactor so that AudioContext is independent of specific JavaSound or other audio IO implementations, and so that AudioContext also points to an 'in' UGen object as well as an 'out' UGen object.
+**Create specific AudioContext objects, such as JJackAudioContext, JavaSoundAudioContext, VSTAudioContext, AndroidAudioContext, JavaMEAudioContext.
+**Remove RTInput UGen, should be encapsulated in specific AudioContext implementations.
+**Fix bug where using RTInput with JavaSound causes output to crackle (Mac only?).
+
+------------
+Audio Files:
+------------
+**Fix bug where audio file can't find duration tag.
+**Test timed loading regimes on a number of audio file types and use-cases.
+IDEALLY (but almost impossible) remove dependencies on 3rd partly libraries and take care of codecs directly.
+**Devise general purpose solution to URLs, signing applets, memory management, etc.
+Improve recording directly to disc (arbitrary undtermined length).
+Provide basic access to id3 tags (other metadata, perhaps EchoNest).
+
+------
+UGens:
+------
+***Profile UGen call chain code and seek speed-ups. In particular, What data structures are fastest? What tricks to avoid unnecesary computation? Can we get the bufferSize down to 64?
+***Decide on Concurrency policy.
+***Provide setParams() method in UGen.
+***Make addInput() return 'this' - CANCELLED.
+***Rename all getter and setter methods in existing UGens (deprecate where necessary) - DONE - and make the setters return 'this' - CANCELLED.
+**Rename Static to Constant.
+Rename Envelope to Breakpoint or Line?
+Work out what to do with doubles (e.g., Clock uses an array of doubles to provide precise time data). Perhaps go entirely to doubles, or devise a generic holder.
+Tidy UGens into sub-packages.
+*Decide whether proxy inputs and outputs is viable / safe / necessary. Declare this experimental or at least non-recommended?
+**Create and test MultiChannelThing (with appropriate name). Develop methodology for variable approach to channel numbers (could involve a major overhaul of UGen!).
+*Work on OscillatorBank (consider tie-in with multichannel controls, look into speedups).
+**Examples and tests for all UGens.
+
+----------------
+Data and Events:
+----------------
+***Finalise DataBead and SoundEvent - DONE.
+**Finalise Pattern.
+Benito's ideas about Instrument, DrumInstrument, PitchedInstrument?
+Consider whether IntegerBead, FloatBead, etc. are still required.
+
+--------------------------------------
+SamplePlayer and GranularSamplePlayer:
+--------------------------------------
+*Implement loop cross fades.
+*Test GranularSamplePlayer, compare with other granulation tools - still doesn't sound quite right.
+
+---------------
+GUI and Player:
+---------------
+*Document and test. Describe contexts.
+Make a bit more pretty.
+Make scaleable and colorable.
+Improve layout management.
+Provide options for management of CPU resources (audio versus GUI).
+(Alternatively, wait, and then completely rework the GUI tools in JavaFX).
+
+-------------------
+Feature Extraction:
+-------------------
+Document concepts.
+Idiotproof against copying of feature frames.
+Work on feature manager.
+Integrate with MPEG-7, XML, SDIF and/or other formats.
+Improve quality of all feature extractors OR find way to tie in with JAudio or MEAP or other?
+***In particular, get onset detection working well.
+
+--------------------
+Long Term / Fantasy:
+--------------------
+Write user guide, creating UGens, creating new AudioContexts, creating FeatureExtractors, GUI and play concepts.
+Create applet-generating tools, plus classes to handle data/resource management in application and applet.
+Create tools to mointor and intelligently respond to memory and CPU usage.
+Add MIDI.
+Create / integrate with live scripting language, OSC interaction with call chain (Supercollider style).
+Create audio graph analysis / auto diagram layout tools / graphing / live-coding/live-patching (or both at once).
+Work out networked, distributed system.
+Make very fast.

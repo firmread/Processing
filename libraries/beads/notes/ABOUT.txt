@@ -1,0 +1,2 @@
+Beads - a computer music and sound art library for Java. 
+For all information go to http://www.beadsproject.net.

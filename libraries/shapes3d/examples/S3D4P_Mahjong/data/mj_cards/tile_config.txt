@@ -1,0 +1,55 @@
+# Playing cards board
+
+# SECTION 1
+# These are the names of the 3 bitmap image files for the faces
+# side and back of the tiles (in that order).
+cards.png
+side.png
+back.png
+
+
+# SECTION 2
+# The number tiles (columns and rows) in the faces image file
+13 5
+
+
+# SECTION 3
+# This is a list of the number of tiles in each set, the number
+# in the list should match the number of rows from section 2
+13 13 0 0 2
+
+# For each set, the number of times each tile is duplicated.
+# Note if the tiles are not duplicated then any tile in the 
+# set can match any other tile in the set.
+4 4 0 0 2
+
+# Matching tiles during game play.
+# For each set indicate with a 'Y' or 'N' whether all the tiles
+# in the set are considered to be the same or not. 
+# Beware that any set that does not have duplicate tiles i.e. a
+# value of 1 in the last list must have a 'Y' in this one or
+# there will be tiles that have no match and cannot be removed
+# during game play.
+N N N N Y 
+
+
+# SECTION 4
+# These numbers define the physical size of the tile and the 
+# horizontal gap to be used between the tiles.
+#                ___________            #
+#               /     W     /| T        #
+#              /           / |          #
+#           D /           /  /          #
+#            /           /  /           #
+#           /___________/  /            #
+#           |           | /             #
+#           |___________|/              #
+# W      D       T       G
+  35    47.5     15    0.7
+ 
+# SECTION 5
+# These are the RGB values to be used to highlight the selected tiles
+# Each value should be an integer in the range 0-255
+ 20 255 20
+
+ # END OF FILE

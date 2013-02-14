@@ -1,0 +1,36 @@
+This software is written and maintained by Ollie Bown (ollie@icarus.nu), Ben Porter, and Benito Crawford except portions of code that have been taken from other open source projects. For practical purposes, this code has been reappropriated to fit into the beads framework, and so cannot simply be linked from the original project that it was taken from. A list of the appropriated code is provided below and the relevant files are marked accordingly.
+
+Creator: MEAPSoft
+License: GPL
+Files: Frequency.java, MelSpectrum.java, MFCC.java, SpectralCentroid.java
+Project Site: http://labrosa.ee.columbia.edu/meapsoft/
+
+Creator: Orange Cow
+License: GPL
+Files: PowerSpectrum.java, FFT.java
+Project Site: http://ocvolume.sourceforge.net/ocvolume.php
+
+Creator: Kees van den Doel
+License: Custom - says code can be used for non-profit purposes
+Files: AudioContext.java, AudioUtils.java
+Project Site: http://www.cs.ubc.ca/~kvdoel/jass/
+
+Creator: Holger Crysandt
+License: LGPL
+Files: FFT.java
+Project Site: http://mpeg7audioenc.sourceforge.net/index.html
+
+Library: MP3SPI (+ JLayer + Tritonus as bundled)
+License: LGPL
+Files: dependencies/ jl1.0.jar, mp3spi1.9.4.jar tritonus_share.jar
+Project Site: http://www.javazoom.net/mp3spi/about.html
+
+Library: JarJar
+License: Apache License 2.0
+File: dependencise jarjar.jar
+Project Site: http://code.google.com/p/jarjar/
+
+Library: JLGui
+License: GPL
+Code: Some snippets adapted into AudioFile
+Project Site: http://www.javazoom.net/jlgui/jlgui.html

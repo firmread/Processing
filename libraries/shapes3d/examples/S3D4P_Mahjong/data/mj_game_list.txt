@@ -1,0 +1,10 @@
+# mj_games_list.txt
+# In here list the folders that contain the Mahjong games
+# and the filenames for the game selector image. 
+# IMPORTANT NOTE neither the folder name nor the icon image 
+# filename can have spaces in them.
+# FOLDER     ICON_FILE
+mj_classic    icon.jpg
+mj_cards      icon.jpg
+mj_smiley     icon.jpg
+

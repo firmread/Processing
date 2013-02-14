@@ -1,0 +1,67 @@
+# SECTION 1
+# Theses numbers represent the number of cols and rows shown in the level 
+# maps below, as well as the number of levels in this board config
+15 8 5
+
+# SECTION 2
+# What follows are the maps for each level of tiles
+# Key + no tile
+#     o tile at this position (Lowercase letter o)
+#     > tile shifted by half right (Greater than sign)
+#     v tile shifted by half down (Lowercase letter V)
+#     x tile shifted by half down and right (Lowercase letter X)
+
+# Level 1
++oooooooooooo++
++++oooooooo++++
+++oooooooooo+++
+voooooooooooovv
++oooooooooooo++
+++oooooooooo+++
++++oooooooo++++
++oooooooooooo++
+
+# Level 2
++++++++++++++++
+++++oooooo+++++
+++++oooooo+++++
+++++oooooo+++++
+++++oooooo+++++
+++++oooooo+++++
+++++oooooo+++++
++++++++++++++++
+
+# Level 3
++++++++++++++++
++++++++++++++++
++++++oooo++++++
++++++oooo++++++
++++++oooo++++++
++++++oooo++++++
++++++++++++++++
++++++++++++++++
+
+# Level 4
++++++++++++++++
++++++++++++++++
++++++++++++++++
+++++++oo+++++++
+++++++oo+++++++
++++++++++++++++
++++++++++++++++
++++++++++++++++
+
+# Level 5
++++++++++++++++
++++++++++++++++
++++++++++++++++
+++++++x++++++++
++++++++++++++++
++++++++++++++++
++++++++++++++++
++++++++++++++++
+
+# SECTION 3
+# These are the RGB values to be used for the table
+# Each value should be an integer in the range 0-255
+60 180 60
